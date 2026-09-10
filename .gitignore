@@ -1,0 +1,5 @@
+*.zip
+.direnv
+.envrc
+.env
+deploy.fish
