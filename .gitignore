@@ -3,3 +3,4 @@
 .envrc
 .env
 deploy.fish
+.DS_Store

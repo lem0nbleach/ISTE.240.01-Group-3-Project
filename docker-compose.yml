@@ -3,7 +3,6 @@ services:
     image: nginx
     volumes:
       - ./public_html:/usr/share/nginx/html:ro
-      - ./config:/config
     ports:
       - 80:80
     environment:
