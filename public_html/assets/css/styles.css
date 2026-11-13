@@ -1,0 +1,278 @@
+@import url('https://cdn.jsdelivr.net/npm/@ibm/plex-mono@2.5.0/css/ibm-plex-mono-all.min.css');
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #000000;
+  background-color: #E0E0E0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+  padding-bottom: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+  padding-top: 50px;
+}
+
+h4 {
+  font-size: 18px;
+  padding-top: 50px;
+}
+
+h5 {
+  font-size: 15px;
+
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4994a7;
+}
+
+img {
+  max-width: 720px;
+  height: auto;
+  display: block;
+  margin-left: 0 auto;
+  border: 10px solid;
+  border-color:  #DDEDF6;
+}
+
+/* Logo */
+.logo img{
+    max-width: 100%;
+    max-height: 100px;
+    display: block;
+    border: none;
+}
+
+.logo {
+    margin-right: 40px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Dropdown menu */
+.dropbtn {
+  background-color:#DB6C4F;
+  color: rgb(47, 47, 49);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: Garamond, serif;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  max-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:#883835;
+}
+
+/* Top bar of website */
+.topbar {
+  background-color: #FFF8F0;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main content */
+main {
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 50px;
+  background-color: #7FCAE3;
+}
+
+li {
+  padding: 20px;
+  font-size: 20px;
+}
+
+/* Image slider for "Mia in Minneapolis!" */
+.slider {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  border-color:  #DDEDF6;
+}
+
+.slider a {
+   color : #7FCAE3;
+}
+
+.slider a:hover {
+   color : #4d7b8b;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+  background:  #DDEDF6;
+  border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+  background:  #DDEDF6;
+}
+
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background:  #DDEDF6;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+
+.author-info a {
+  color:  #DDEDF6;
+}
+
+.slider img {
+  object-fit: cover;
+  position: absolute;
+  padding-left: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #DDEDF6;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider > a:active {
+  top: 1px;
+}
+
+.slider > a:focus {
+  background:  #7dabc6;
+}
+
+
+/* Footer styling */
+footer {
+  grid-area: footer;
+  text-align: center;
+  background-color:  #4A81BF;
+  color: #002047;
+  min-height: 100vh;
+}
+
+
+/* Screen width constraints */
+@media (max-width: 800px) {
+  main {
+      grid-template-columns: 1fr;  
+  }
+
+  .topbar ul {
+      text-align: center;
+  }
+
+  .topbar li {
+      display: block;
+      margin: 10px 0;
+  }
+
+  img {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 700px) {
+  img {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    max-width: 400px;
+  }
+}
