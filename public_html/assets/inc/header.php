@@ -1,7 +1,6 @@
 <?php
 	$pageTitle = $pageTitle ?? 'Tigersay';
 	$activeNav = $activeNav ?? '';
-	$cssFile = $cssFile ?? 'index.css';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +8,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php echo htmlspecialchars($pageTitle); ?> — Tigersay</title>
-	<link href="assets/css/<?php echo htmlspecialchars($cssFile); ?>" rel="stylesheet">
+	<link href="assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
 
