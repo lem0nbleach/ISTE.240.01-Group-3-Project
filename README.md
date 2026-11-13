@@ -49,8 +49,8 @@ Because of that, the doctype, navigation and footer exist in exactly one file ea
 │       └── images/
 │           └── tigersay logo/    Dark and white logo PNGs
 ├── nginx/
-│   └── default.conf              Server block; routes .php to the PHP service
-├── docker-compose.yml            Optional local nginx + PHP stack
+│   └── default.conf              Server block for the local preview
+├── docker-compose.yml            Local preview stack — requires Docker
 └── README.md
 ```
 
@@ -73,12 +73,50 @@ The header, navigation, footer and stylesheet live in `public_html/assets/`. An 
 - Page files contain no doctype, `<nav>`, `<footer>` or layout markup.
 - If something appears on more than one page, it belongs in `assets/inc/`.
 
-## Running the site locally
+## Working with git
 
-A docker compose is provided with a very minimal nginx server, configured in `nginx/default.conf` with php enabled. 
+Everyone commits to `main`. There are no branches, so there is nothing to merge — but that also means `main` is shared, and a careless commit lands on everyone.
+
+If git is new to you, read **chapters 1 and 2** of [Pro Git](https://git-scm.com/book/en/v2). Between them they cover everything this project uses. Chapter 3 (branching) and chapter 4 (servers) are not needed here.
+
+The daily loop:
+
+```bash
+git pull                 # get everyone else's work first
+git status               # what have I changed?
+git add <files>
+git commit -m "area: what changed"
+git push
+```
+
+### Commit messages
+
+- **One change per commit.** If you can't describe it in one sentence, it's two commits.
+- **Subject:** `area: imperative summary`. Lowercase area, no trailing period, aim for 50 characters.
+  - Good: `nav: highlight the active page link`
+  - Weak: `nav fix` — fixed what, and where?
+- **Body when needed.** If the reason isn't obvious from the subject, explain *why*. The subject says what changed; the body says why it had to.
+
+Each `-m` is one paragraph. The first is the subject, the second is the body, and git puts the blank line between them itself:
+
+```bash
+git commit -m "nav: highlight the active page link" \
+           -m "The nav gave no sign of which page you were on. Add class=active and aria-current to the matching link."
+```
+
+If you prefer to write it out, run `git commit` with no `-m`. That opens your editor: type the subject, leave one blank line, then write the body. Save and close to commit.
+
+### Two rules
+
+- **Never force-push.** It rewrites history other people may already have. If a push is rejected, `git pull`, resolve, then push again.
+- **Never commit clutter.** `*.zip`, `.DS_Store`, local scratch files. `.gitignore` already excludes them; don't force one in with `git add -f`.
+
+## Running the site locally (optional)
+
+For previewing changes on your own machine. RIT hosts and serves the project, so this isn't needed to publish or submit, and it requires Docker — which not everyone has.
 
 ```bash
 sudo docker compose up -d
 ```
 
-Then open <http://localhost>.
+Then open <http://localhost>. `sudo docker compose down` stops it.
