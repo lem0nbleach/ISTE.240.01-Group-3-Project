@@ -279,15 +279,20 @@ li {
 }
 
 
-/* Footer styling */
-footer {
-  grid-area: footer;
+/* footer styles are here */
+.site-footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  background-color:  #4A81BF;
-  color: #002047;
-  min-height: 100vh;
+  background-color: black;
+  color: white;
 }
 
+.site-footer p {
+  margin: 0;
+  padding: 30px 0;
+}
 
 /* Screen width constraints */
 @media (max-width: 800px) {
