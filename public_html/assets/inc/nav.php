@@ -1,5 +1,8 @@
 <nav class="site-nav" aria-label="Main">
-	<a href="index.php" class="<?php echo $activeNav === 'home' ? 'active' : ''; ?>"<?php echo $activeNav === 'home' ? ' aria-current="page"' : ''; ?>>Home</a>
+	<div class="home-logo">
+		<img src="/assets/images/tigersay-logo/white_logo_embellished.PNG">
+		<a href="index.php" class="<?php echo $activeNav === 'home' ? 'active' : ''; ?>"<?php echo $activeNav === 'home' ? ' aria-current="page"' : ''; ?>>&lt;Tigersay!&gt;</a>
+	</div>
 	<a href="basics.php" class="<?php echo $activeNav === 'basics' ? 'active' : ''; ?>"<?php echo $activeNav === 'basics' ? ' aria-current="page"' : ''; ?>>Basics</a>
 	<a href="permissions.php" class="<?php echo $activeNav === 'permissions' ? 'active' : ''; ?>"<?php echo $activeNav === 'permissions' ? ' aria-current="page"' : ''; ?>>Permissions</a>
 	<a href="apps-tools.php" class="<?php echo $activeNav === 'apps' ? 'active' : ''; ?>"<?php echo $activeNav === 'apps' ? ' aria-current="page"' : ''; ?>>Apps &amp; Tools</a>
