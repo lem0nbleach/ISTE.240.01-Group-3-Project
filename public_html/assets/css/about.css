@@ -1,0 +1,35 @@
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* selects team-member sections that are the LAST section and ODD, center align on page instead of following the team-grid style defined above*/
+.team-member:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - 12.5px); /* calculate and define width of last odd element to ensure same size as other elements */
+    justify-self: center;
+    box-sizing: border-box;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.team-member span {
+    color: #D8D2C2;
+}
+
+.team-member p {
+    text-align: center;
+}
+
+.member-header img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
