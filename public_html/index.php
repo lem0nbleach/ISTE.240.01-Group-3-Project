@@ -8,6 +8,7 @@
 
 	<h1>Tigersay</h1>
 	<p class="lede">A shared reference for understanding how the web works, what it permits, and which tools make it usable.</p>
+	<p>DAN EMPASIZED TO MAKE SURE THAT OUR WEBSITE COMMUNICATES OUR WEBSITE IS ABOUT UNIX TUTORIALS.</p>
 
 	<!-- Page content goes here. Each page sets $pageTitle and $activeNav above. -->
 
