@@ -1,3 +1,0 @@
-you can delete this file after you put a real image in here
-
-just a placeholder so the folder can be pushed to git
