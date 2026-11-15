@@ -185,6 +185,19 @@ li {
   font-size: 20px;
 }
 
+/* style for standard box of content */
+.content-box {
+  background-color: #111;
+  padding: 20px;
+  margin: 20px 50px;
+  border-radius: 10px;
+  color: white;
+}
+
+.content-box h2 {
+  color:#69CC4D;
+}
+
 /* Image slider for "Mia in Minneapolis!" */
 .slider {
   width: 300px;
