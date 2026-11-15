@@ -14,7 +14,6 @@
 
 	<header class="site-header">
 		<div class="wrap header-inner">
-			<a class="brand" href="index.php">Tigersay</a>
 			<?php include __DIR__ . '/nav.php'; ?>
 		</div>
 	</header>
