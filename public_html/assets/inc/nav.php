@@ -1,6 +1,6 @@
 <nav class="site-nav" aria-label="Main">
 	<div class="home-logo">
-		<img src="/assets/images/tigersay-logo/white_logo_embellished.PNG">
+		<img src="/assets/images/tigersay-logo/white_logo_embellished.PNG"> <!-- will have to change logo path when we introduce light/dark mode slider -->
 		<a href="index.php" class="<?php echo $activeNav === 'home' ? 'active' : ''; ?>"<?php echo $activeNav === 'home' ? ' aria-current="page"' : ''; ?>>&lt;Tigersay!&gt;</a>
 	</div>
 	<a href="basics.php" class="<?php echo $activeNav === 'basics' ? 'active' : ''; ?>"<?php echo $activeNav === 'basics' ? ' aria-current="page"' : ''; ?>>Basics</a>
