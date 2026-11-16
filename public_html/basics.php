@@ -63,7 +63,18 @@
 			<li>`rmdir` - Remove an empty directory. Use `rmdir &lt;directory&gt;` to delete the specified empty directory.</li>
 		</ul>
 	</section>
-
+	<section class="content-box">
+		<h2>Try out some of the commands mentioned above in this terminal:</h2>
+		<p>You are located in somewhere in the home directory, Your goal is to find out where you are, list directories,
+			create a new directory inside the music folder, and then list its contents to see your new directory.
+		</p>
+		<div id="screen"></div>
+  	<form id="form">
+    	<span id="prompt"></span>
+    	<input id="box" autocomplete="off" autofocus>
+  	</form>
+		<script src="assets/scripts/basicsTerminal.js"></script>
+	</section>
 	<!-- Page content goes here. Each page sets $pageTitle and $activeNav above. -->
 
 <?php include $path . 'assets/inc/footer.php'; ?>
