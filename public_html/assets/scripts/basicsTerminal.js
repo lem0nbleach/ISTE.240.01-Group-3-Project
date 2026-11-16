@@ -21,7 +21,7 @@ var steps = [
   { command: "cd ..", hint: "the 'cd' command changes your directory and '..' refers to the parent directory"},
   { command: "ls", hint: "the 'ls' command lists what is in this folder" },
   { command: "cd music", hint: "the 'cd' command changes your directory to the specified folder" },
-  { command: "mkdir albums", hint: "the 'mkdir' command creates a new directory (you are creating the 'music' directory)" },
+  { command: "mkdir albums", hint: "the 'mkdir' command creates a new directory (you are creating the 'albums' directory)" },
   { command: "ls", hint: "type the 'ls' command to see your new folder!" }
 ];
 
