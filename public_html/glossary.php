@@ -7,8 +7,21 @@
 ?>
 
 	<h1>Glossary</h1>
-	<p class="lede">The vocabulary used across this site, defined once and linked from everywhere.</p>
+	<div class="glossary-layout">
 
-	<!-- Page content goes here. Each page sets $pageTitle and $activeNav above. -->
+		<section class="glossary-section">
+			<a href="index.php">
+				<h2>Home Page</h2>
+			</a>
+			
+			<ul class="glossary-list">
+				<li>
+					<a href="index.php" rel="noopener">Word</a>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia natus quidem saepe optio veniam aut! Suscipit nesciunt quae minima. Esse minima ducimus cupiditate nam possimus ex cum natus consectetur voluptatibus.</p>
+				</li>
+			</ul>
+		</section>
+
+	</div>
 
 <?php include $path . 'assets/inc/footer.php'; ?>
