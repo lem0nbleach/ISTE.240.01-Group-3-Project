@@ -68,6 +68,7 @@
 		<p>You are located in somewhere in the home directory Your goals are to: </p> 
 		<ol>
 			<li>Find out where you are.</li>
+			<li>Navigate to the parent directory.</li>
 			<li>List directories.</li>
 			<li>Change directory to the music folder.</li>
 			<li>Create a new 'albums' directory inside the music folder.</li>
