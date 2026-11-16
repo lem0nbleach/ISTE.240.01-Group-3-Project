@@ -65,9 +65,14 @@
 	</section>
 	<section class="content-box">
 		<h2>Try out some of the commands mentioned above in this terminal:</h2>
-		<p>You are located in somewhere in the home directory, Your goal is to find out where you are, list directories,
-			create a new directory inside the music folder, and then list its contents to see your new directory.
-		</p>
+		<p>You are located in somewhere in the home directory Your goals are to: </p> 
+		<ol>
+			<li>Find out where you are.</li>
+			<li>List directories.</li>
+			<li>Change directory to the music folder.</li>
+			<li>Create a new 'albums' directory inside the music folder.</li>
+			<li>List its contents to see your new directory.</li>
+		</ol>
 		<div class="terminal">
 			<div id="screen"></div>
 			<form id="form">
