@@ -64,7 +64,7 @@
 		</ul>
 	</section>
 	<section class="content-box">
-		<h2>Try out some of the commands mentioned above in this terminal:</h2>
+		<h2>Try out some commands in this terminal!</h2>
 		<p>You are located in somewhere in the home directory Your goals are to: </p> 
 		<ol>
 			<li>Find out where you are.</li>
