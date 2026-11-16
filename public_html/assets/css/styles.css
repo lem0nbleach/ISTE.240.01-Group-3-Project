@@ -198,6 +198,26 @@ li {
   color:#69CC4D;
 }
 
+/* Styling for pretend unix terminal */
+.terminal {
+  background-color: #0e0e0e;
+  color: #69CC4D;
+  padding: 20px;
+  border: 1px solid #69CC4D;
+  font-family: monospace;
+  font-size: 16px;
+  min-height: 200px;
+  margin: 20px 20px;
+}
+
+#box {
+  background-color: #0e0e0e;
+  color: #69CC4D;
+  border: none;
+  font-family: monospace;
+  font-size: 16px;
+}
+
 /* Image slider for "Mia in Minneapolis!" */
 .slider {
   width: 300px;

@@ -68,12 +68,14 @@
 		<p>You are located in somewhere in the home directory, Your goal is to find out where you are, list directories,
 			create a new directory inside the music folder, and then list its contents to see your new directory.
 		</p>
-		<div id="screen"></div>
-  	<form id="form">
-    	<span id="prompt"></span>
-    	<input id="box" autocomplete="off" autofocus>
-  	</form>
-		<script src="assets/scripts/basicsTerminal.js"></script>
+		<div class="terminal">
+			<div id="screen"></div>
+			<form id="form">
+				<span id="prompt"></span>
+				<input id="box" autocomplete="off" placeholder="Enter commands here">
+			</form>
+			<script src="assets/scripts/basicsTerminal.js"></script>
+		</div>
 	</section>
 	<!-- Page content goes here. Each page sets $pageTitle and $activeNav above. -->
 
