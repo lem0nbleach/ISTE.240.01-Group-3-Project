@@ -2,8 +2,8 @@
 
 body {
   font-family: 'IBM Plex Mono', monospace;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: light-dark(#ffffff, #000000);
+  color: light-dark(#000000, #ffffff);
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -12,45 +12,46 @@ body {
 }
 
 h1 {
+  color: light-dark(#000000, #ffffff);
   font-size: 40px;
   padding-bottom: 50px;
 }
 
 h2 {
+  color: light-dark(#000000, #ffffff);
   font-size: 30px;
 }
 
 h3 {
+  color: light-dark(#000000, #ffffff);
   font-size: 25px;
   padding-top: 50px;
 }
 
 h4 {
+  color: light-dark(#000000, #ffffff);
   font-size: 18px;
   padding-top: 50px;
 }
 
 h5 {
+  color: light-dark(#000000, #ffffff);
   font-size: 15px;
 
 }
 
 p {
+  color: light-dark(#000000, #ffffff);
   font-size: 18px;
 }
 
 a {
-  color: #ffffff;
   text-decoration: none;
-}
-
-a:hover {
-  color: #4994a7;
 }
 
 /* navbar styles */
 .site-nav {
-  background-color: black;
+  background-color: light-dark(#ffffff, #000000);
   display: flex;
   align-items: center;
   gap: 25px;
@@ -71,7 +72,6 @@ a:hover {
 }
 
 .home-logo a {
-  color: white;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -87,7 +87,7 @@ a:hover {
 }
 
 .site-nav > a {
-  color: white;
+  color: light-dark(#000000, #ffffff);
   text-decoration: none;
   font-size: 16px;
 }
@@ -138,7 +138,7 @@ a:hover {
 .dropdown-content {
   display: none;
   margin: 0 auto;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   min-width: 200px;
   max-width: 300px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -165,7 +165,8 @@ a:hover {
 
 /* Top bar of website */
 .topbar {
-  background-color: #FFF8F0;
+  background-color: light-dark(#ffffff, #000000);
+  color: light-dark(#000000, #ffffff);
   overflow: hidden;
   padding: 20px;
   text-align: center;
@@ -174,7 +175,8 @@ a:hover {
 /* styles for <main>, aka the html tag which all page content is rendered inside of */
 /* change padding and margin as desired  */
 main {
-  background-color: black;
+  background-color: light-dark(#ffffff, #000000);
+  color: light-dark(#000000, #ffffff);
   flex: 1;
   padding: 50px;
   margin: 30px 40px;
@@ -187,11 +189,9 @@ li {
 
 /* style for standard box of content */
 .content-box {
-  background-color: #111;
   padding: 20px;
   margin: 20px 50px;
   border-radius: 10px;
-  color: white;
 }
 
 .content-box h2 {
@@ -211,107 +211,12 @@ li {
 }
 
 #box {
-  background-color: #0e0e0e;
-  color: #69CC4D;
+  background-color: light-dark(#ffffff, #000000);
+  color: light-dark(#000000, #ffffff);
   border: none;
   font-family: monospace;
   font-size: 16px;
 }
-
-/* Image slider for "Mia in Minneapolis!" */
-.slider {
-  width: 300px;
-  text-align: center;
-  overflow: hidden;
-  margin: 0 auto;
-  border-color:  #DDEDF6;
-}
-
-.slider a {
-   color : #7FCAE3;
-}
-
-.slider a:hover {
-   color : #4d7b8b;
-}
-
-.slides {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-
-}
-
-.slides::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-.slides::-webkit-scrollbar-thumb {
-  background:  #DDEDF6;
-  border-radius: 10px;
-}
-
-.slides::-webkit-scrollbar-track {
-  background:  #DDEDF6;
-}
-
-.slides > div {
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  width: 300px;
-  height: 300px;
-  margin-right: 50px;
-  border-radius: 10px;
-  background:  #DDEDF6;
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 100px;
-}
-
-
-.author-info a {
-  color:  #DDEDF6;
-}
-
-.slider img {
-  object-fit: cover;
-  position: absolute;
-  padding-left: 10px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.slider > a {
-  display: inline-flex;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: #DDEDF6;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.slider > a:active {
-  top: 1px;
-}
-
-.slider > a:focus {
-  background:  #7dabc6;
-}
-
 
 /* footer styles are here */
 .site-footer {
@@ -319,8 +224,8 @@ li {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: light-dark(#ffffff, #000000);
+  color: light-dark(#000000, #ffffff);
 }
 
 .site-footer p {
@@ -359,3 +264,66 @@ li {
     max-width: 400px;
   }
 }
+
+/* Define Theme Colors */
+:root {
+  color-scheme: light;
+  --track-bg: #cbd5e1;
+  --track-active: #27ff52;
+  --knob-color: #ffffff;
+}
+
+/* Switch root color-scheme when the checkbox is checked */
+:root:has(#theme-toggle:checked) {
+  color-scheme: dark;
+}
+
+nav {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Slider track */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background-color: var(--track-bg);
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+/* sliding knob */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--knob-color);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+input:checked + .slider {
+  background-color: var(--track-active);
+}
+
+input:checked + .slider::before {
+  transform: translateX(28px);
+}
+

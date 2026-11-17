@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Home';
 	$activeNav = 'home';
-	$cssFile = 'index.css';
+	$cssFile = 'styles.css';
 	$path = './';
 	include $path . 'assets/inc/header.php';
 ?>
@@ -12,4 +12,4 @@
 
 	<!-- Page content goes here. Each page sets $pageTitle and $activeNav above. -->
 
-<?php include $path . 'assets/inc/footer.php'; ?>
+	<?php include $path . 'assets/inc/footer.php'; ?>

@@ -9,6 +9,15 @@
 	<a href="glossary.php" class="<?php echo $activeNav === 'glossary' ? 'active' : ''; ?>"<?php echo $activeNav === 'glossary' ? ' aria-current="page"' : ''; ?>>Glossary</a>
 	<a href="references.php" class="<?php echo $activeNav === 'references' ? 'active' : ''; ?>"<?php echo $activeNav === 'references' ? ' aria-current="page"' : ''; ?>>References</a>
 	<a href="about.php" class="<?php echo $activeNav === 'about' ? 'active' : ''; ?>"<?php echo $activeNav === 'about' ? ' aria-current="page"' : ''; ?>>About</a>
+	</head>
+	<div class="container">
+		<p>Light & Dark Mode</p>
+		<!-- Toggle Switch -->
+		<label class="theme-switch" aria-label="Toggle dark mode">
+		<input type="checkbox" id="theme-toggle">
+		<span class="slider"></span>
+		</label>
+	</div>
 </nav>
 
 <!-- The php here changes the class to 'active' if you are on the current page and adds aria-current="nameofpage" to indicate so -->
