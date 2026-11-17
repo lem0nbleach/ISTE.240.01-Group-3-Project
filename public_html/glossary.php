@@ -18,22 +18,24 @@
 			
 			<ul class="glossary-list">
 				<li>
-					<a href="index.php" rel="noopener">Word</a>
+					<!-- make sure to provide the ID for the word you are trying to reach using a path. /index.php#id-for-word-here -->
+					<!-- the word must be wrapped in an <a> tag with an href of the id. ex <a href="#target-word">word</a> -->
+					<a href="ID GOES HERE" rel="noopener">Word</a>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia natus quidem saepe optio veniam aut! Suscipit nesciunt quae minima. Esse minima ducimus cupiditate nam possimus ex cum natus consectetur voluptatibus.</p>
 				</li>
 
 				<li>
-					<a href="index.php" rel="noopener">Word</a>
+					<a href="ID GOES HERE" rel="noopener">Word</a>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia natus quidem saepe optio veniam aut! Suscipit nesciunt quae minima. Esse minima ducimus cupiditate nam possimus ex cum natus consectetur voluptatibus.</p>
 				</li>
 
 				<li>
-					<a href="index.php" rel="noopener">Word</a>
+					<a href="ID GOES HERE" rel="noopener">Word</a>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia natus quidem saepe optio veniam aut! Suscipit nesciunt quae minima. Esse minima ducimus cupiditate nam possimus ex cum natus consectetur voluptatibus.</p>
 				</li>
 
 				<li>
-					<a href="index.php" rel="noopener">Word</a>
+					<a href="ID GOES HERE" rel="noopener">Word</a>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia natus quidem saepe optio veniam aut! Suscipit nesciunt quae minima. Esse minima ducimus cupiditate nam possimus ex cum natus consectetur voluptatibus.</p>
 				</li>
 			</ul>
