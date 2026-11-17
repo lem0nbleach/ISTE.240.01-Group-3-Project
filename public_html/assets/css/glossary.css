@@ -58,6 +58,7 @@ h1 {
 }
 
 .glossary-list li a {
+    color: white;
     font-weight: 600;
     text-decoration: none;
 }
