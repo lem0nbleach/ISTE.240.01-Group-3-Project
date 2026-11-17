@@ -1,0 +1,73 @@
+h1 {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    padding: 5px;
+}
+
+.glossary-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto 80px;
+}
+
+.glossary-section {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.glossary-section {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.glossary-section h2 {
+    color: white;
+    margin: 0 0 20px;
+}
+
+.glossary-section > a h2:hover {
+    color: #69CC4D;
+}
+
+.glossary-section a:hover h2 {
+    opacity: 0.75;
+}
+
+.glossary-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.glossary-list li {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 20px;
+    padding: 32px 0;
+    border-bottom: 1px solid #ddd;
+    align-items: start;
+}
+
+.glossary-list li:last-child {
+    border-bottom: none;
+}
+
+.glossary-list li a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.glossary-list li a:hover {
+    color: #69CC4D;
+}
+
+.glossary-list li p {
+    margin: 0;
+    line-height: 1.6;
+    max-width: 65ch;
+}
