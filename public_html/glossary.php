@@ -9,6 +9,8 @@
 	<h1>Glossary</h1>
 	<div class="glossary-layout">
 
+		<!-- TO ADD MORE GLOSSARY PAGS, COPY AND PASTE THE "glossary-section" AND THEN FILL IN INFORMATION THAT IS APPROPRIATE -->
+		<!-- TO ADD MORE WORDS IN THE GLOSSARY, COPY AND PASTE <li> ELEMENTS INSIDE OF "glossary-list" AND FILL IN APPROPRIATE INFORMATION -->
 		<section class="glossary-section">
 			<a href="index.php">
 				<h2>Home Page</h2>
