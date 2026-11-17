@@ -1,7 +1,5 @@
 # Tigersay — ISTE.240 Group Project
 
-This repository holds the group project site for **ISTE.240**. The course doubles as a Unix tutorial, so the work here is as much about the mechanics as the content: files served by a web server, shared includes, relative paths, and doing it from a shell rather than a GUI.
-
 ## How the site is put together
 
 Every page is **content only**. It sets two variables, pulls in the shared header, writes its content, and pulls in the shared footer:
@@ -21,9 +19,9 @@ Every page is **content only**. It sets two variables, pulls in the shared heade
 ```
 
 - `$pageTitle` becomes the `<title>` (escaped in `header.php`).
-- `$activeNav` is the page's key. `nav.php` compares it against each link and adds `class="active"` and `aria-current="page"` to the matching one.
+- `$activeNav` is the page's key. `nav.php` compares it to each link and adds `class="active"` and `aria-current="page"` to the matching one.
 
-`header.php` contains the doctype, the `<head>`, the opening `<body>`, the site header, and it includes `nav.php` with `include __DIR__ . '/nav.php'`. `footer.php` closes `<main>`, prints the footer, and closes the document.
+`header.php` contains the doctype, metadata, the `<head>`, etc., then the opening `<body>`, the site header, and it includes `nav.php` with `include __DIR__ . '/nav.php'`. `footer.php` closes `<main>`, prints the footer, and closes the document.
 
 Because of that, the doctype, navigation and footer exist in exactly one file each. Change `nav.php` and every page changes.
 
@@ -45,9 +43,6 @@ Because of that, the doctype, navigation and footer exist in exactly one file ea
 │       │   ├── nav.php           Navigation links and active-page logic
 │       │   └── footer.php        Closes <main>, prints footer, closes document
 │       ├── css/
-│       │   └── styles.css        The single site stylesheet (linked by header.php)
-│       └── images/
-│           └── tigersay logo/    Dark and white logo PNGs
 ├── nginx/
 │   └── default.conf              Server block for the local preview
 ├── docker-compose.yml            Local preview stack — requires Docker
@@ -56,14 +51,13 @@ Because of that, the doctype, navigation and footer exist in exactly one file ea
 
 ## Adding a page
 
-1. Copy an existing page: `cp public_html/basics.php public_html/faq.php`
+1. Copy an existing page: `cp public_html/basics.php public_html/faq.php` (or any other page for that matter)
 2. Change `$pageTitle` and `$activeNav` at the top.
 3. Add a matching link to `public_html/assets/inc/nav.php`, using the same key you put in `$activeNav`.
-4. Put styles in `public_html/assets/css/styles.css`, not in the page.
 
 ## Editing shared elements
 
-The header, navigation, footer and stylesheet live in `public_html/assets/`. An edit there appears on every page at once — which is the point, and also the risk. Change them deliberately.
+Practically everything that is not the page content itself lives in `public_html/assets`. Every content page pulls in the same shared asset for consistency and ease of edit.
 
 ## Conventions
 
