@@ -12,10 +12,10 @@ var folders = {
   "/home/documents": ["file.txt", "notes.docx", "2024_taxes"],
   "/home/music": ["song.mp3", "playlists"],
 };
-// easy value to store location
+// Wherever you want the user to be goes here
 var where = "/home/documents";
 
-// lesson steps (exactly the order to expect commands)
+// Choose the commands you want the user to do, in order, along with the hints here
 var steps = [
   { command: "pwd", hint: "the 'pwd' command prints your current directory"},
   { command: "cd ..", hint: "the 'cd' command changes your directory and '..' refers to the parent directory"},
