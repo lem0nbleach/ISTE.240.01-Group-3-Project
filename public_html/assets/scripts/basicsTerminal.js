@@ -3,7 +3,7 @@
 // first get the elements we need
 var screen = document.getElementById('screen');
 var prompt = document.getElementById('prompt');
-var box = document.getElementById('box');
+var box = document.getElementById('entry');
 
 // make the names of the folders Ill actually be using each one will
 // be a list of the folders and pretend items inside it

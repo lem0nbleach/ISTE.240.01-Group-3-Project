@@ -78,7 +78,7 @@
 			<div id="screen"></div>
 			<form id="form">
 				<span id="prompt"></span>
-				<input id="box" autocomplete="off" placeholder="Enter commands here">
+				<input id="entry" autocomplete="off" placeholder="Enter commands here">
 			</form>
 			<script src="assets/scripts/basicsTerminal.js"></script>
 		</div>
