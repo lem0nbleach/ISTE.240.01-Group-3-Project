@@ -1,18 +1,21 @@
 <?php
 	$pageTitle = 'Home';
 	$activeNav = 'home';
-	$cssFile = 'styles.css';
+	$cssFile = 'index.css';
 	$path = './';
 	include $path . 'assets/inc/header.php';
 ?>
 
-	<h1>Tigersay</h1>
-	<p class="lede">A shared reference for understanding how the web works, what it permits, and which tools make it usable.</p>
-	<p>DAN EMPASIZED TO MAKE SURE THAT OUR WEBSITE COMMUNICATES OUR WEBSITE IS ABOUT UNIX TUTORIALS.</p>
+	<section class="hero" data-lines="a unix tutorial, written by students.|learn the shell by actually using it.|the command line, explained properly.">
+		<h1 class="sr-only">Tigersay</h1>
+		<p class="hero-line" aria-hidden="true"><span class="hero-text"></span><span class="hero-cursor"></span></p>
+		<p class="hero-note">A shared reference for understanding how the web works, what it permits, and which tools make it usable.</p>
+	</section>
+
 	<section class="content-box">
 		<h2>What is Unix?</h2>
 		<p>The name Unix in modern definition, refers to a family of operating systems that was
-			derived from the original system named `unix`, of which was developed by AT&T and Bell
+			derived from the original system named `unix`, of which was developed by AT&amp;T and Bell
 			Labs. Famous examples of current day Unix are Linux, MacOS, and BSD.
 		</p>
 		<p>
@@ -44,5 +47,7 @@
 		</p>
 	</section>
 	<!-- Page content goes here. Each page sets $pageTitle and $activeNav above. -->
+
+	<script src="assets/scripts/heroType.js"></script>
 
 	<?php include $path . 'assets/inc/footer.php'; ?>
