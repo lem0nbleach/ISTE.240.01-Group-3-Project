@@ -78,6 +78,19 @@ a {
   display: block;
 }
 
+/* Logo follows the theme: light artwork on dark, dark artwork on light. */
+.home-logo .logo-dark {
+  display: none;
+}
+
+:root[data-theme="light"] .home-logo .logo-white {
+  display: none;
+}
+
+:root[data-theme="light"] .home-logo .logo-dark {
+  display: block;
+}
+
 .home-logo a {
   color: #69CC4D;
   font-size: 24px;
@@ -284,10 +297,13 @@ li {
   color-scheme: dark;
 }
 
+/* Light mode is opt-in; dark is the default. */
 :root[data-theme="light"] {
   color-scheme: light;
 }
 
+/* Theme flip: fade every surface that changes colour, so the switch reads as one motion.
+   Only colour properties are listed, so nothing moves or resizes. */
 *,
 *::before,
 *::after {

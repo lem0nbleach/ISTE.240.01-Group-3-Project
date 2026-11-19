@@ -1,6 +1,7 @@
 <nav class="site-nav" aria-label="Main">
 	<div class="home-logo">
-		<img src="assets/images/tigersay-logo/white_logo_embellished.PNG" alt=""> <!-- will have to change logo path when we introduce light/dark mode slider -->
+		<img class="logo-white" src="assets/images/tigersay-logo/white_logo_embellished.PNG" alt="">
+		<img class="logo-dark" src="assets/images/tigersay-logo/dark_logo_embellished.PNG" alt="">
 		<a href="index.php" class="<?php echo $activeNav === 'home' ? 'active' : ''; ?>"<?php echo $activeNav === 'home' ? ' aria-current="page"' : ''; ?>>&lt;Tigersay!&gt;</a>
 	</div>
 	<a href="basics.php" class="<?php echo $activeNav === 'basics' ? 'active' : ''; ?>"<?php echo $activeNav === 'basics' ? ' aria-current="page"' : ''; ?>>Basics</a>
@@ -10,7 +11,6 @@
 	<a href="references.php" class="<?php echo $activeNav === 'references' ? 'active' : ''; ?>"<?php echo $activeNav === 'references' ? ' aria-current="page"' : ''; ?>>References</a>
 	<a href="about.php" class="<?php echo $activeNav === 'about' ? 'active' : ''; ?>"<?php echo $activeNav === 'about' ? ' aria-current="page"' : ''; ?>>About</a>
 
-	<!-- Found these svgs on reddit, they are great -->
 	<button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="true" aria-label="Switch to light mode">
 		<svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 			<circle cx="12" cy="12" r="4"/>
