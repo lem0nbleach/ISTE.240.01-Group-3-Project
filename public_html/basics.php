@@ -7,27 +7,6 @@
 ?>
 
 	<h1>Basics</h1>
-
-	<aside class = "sidebar">
-		<div class = "sidebar-header">
-			<h2>Basics Nav</h2>
-		</div>
-		<ul class = "sidebar-links"></ul>
-		<h4>Sub Category</h4>
-		<li>
-			<a href = "#"><span class = "material-symbols-outlined">
-			</span>Placeholder</a>
-		</li>
-		<li>
-			<a href = "#"><span class = "material-symbols-outlined">
-			</span>Placeholder</a>
-		</li>
-		<li>
-			<a href = "#"><span class = "material-symbols-outlined">
-			</span>Placeholder</a>
-		</li> 
-	</aside>
-
 	<section class="content-box">
 		<h2>File Structure</h2>
 		<p>In Unix systems, the file structure is hierarchical, starting from the root directory denoted by
@@ -61,14 +40,17 @@
 			<li>Create a new 'albums' directory inside the music folder.</li>
 			<li>List its contents to see your new directory.</li>
 		</ol>
+
+		<!-- This is what a terminal looks like in a html file -->
 		<div class="terminal">
-			<div id="screen"></div>
-			<form id="form">
-				<span id="prompt"></span>
-				<input id="entry" autocomplete="off" placeholder="Enter commands here">
+			<div class="screen" id="files-screen"></div>
+			<form id="files-form">
+				<span class="prompt" id="files-prompt"></span>
+				<input class="entry" id="files-entry" autocomplete="off" placeholder="Enter commands here">
 			</form>
 			<script src="assets/scripts/basicsTerminal.js"></script>
 		</div>
+
 	</section>
 	<!-- Page content goes here. Each page sets $pageTitle and $activeNav above. -->
 

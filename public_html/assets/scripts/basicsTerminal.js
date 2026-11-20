@@ -1,9 +1,9 @@
 
 
 // first get the elements we need
-var screen = document.getElementById('screen');
-var prompt = document.getElementById('prompt');
-var box = document.getElementById('entry');
+var screen = document.getElementById('files-screen');  //edit me
+var prompt = document.getElementById('files-prompt');
+var box = document.getElementById('files-entry');
 
 // make the names of the folders Ill actually be using each one will
 // be a list of the folders and pretend items inside it
@@ -63,7 +63,8 @@ function runCommand(command) {
 }
 
 // handle form submission (presses enter)
-document.getElementById('form').addEventListener('submit', function(event) {
+                      //edit me \/
+document.getElementById('files-form').addEventListener('submit', function(event) {
   event.preventDefault();
   var typed = box.value.trim();
   box.value = '';
