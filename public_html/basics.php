@@ -7,7 +7,7 @@
 ?>
 
 	<h1>Basics</h1>
-	<section class="content-box">
+	<section class="content-box" id="file-structures">
 		<h2>File Structure</h2>
 		<p>In Unix systems, the file structure is hierarchical, starting from the root directory denoted by
 			`/`. All files and directories stem from this root. Common directories include, `/etc` for
