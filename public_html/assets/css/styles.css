@@ -181,6 +181,7 @@ main {
   flex: 1;
   padding: 50px;
   margin: 30px 40px;
+  
 }
 
 li {
@@ -190,6 +191,8 @@ li {
 
 /* style for standard box of content */
 .content-box {
+  background-color: light-dark(#f0f0f0, #111111);
+  color: light-dark(#000000, #ffffff);
   padding: 20px;
   margin: 20px 50px;
   border-radius: 10px;
