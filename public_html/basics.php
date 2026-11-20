@@ -7,6 +7,27 @@
 ?>
 
 	<h1>Basics</h1>
+
+	<aside class = "sidebar">
+		<div class = "sidebar-header">
+			<h2>Basics Nav</h2>
+		</div>
+		<ul class = "sidebar-links"></ul>
+		<h4>Sub Category</h4>
+		<li>
+			<a href = "#"><span class = "material-symbols-outlined">
+			</span>Placeholder</a>
+		</li>
+		<li>
+			<a href = "#"><span class = "material-symbols-outlined">
+			</span>Placeholder</a>
+		</li>
+		<li>
+			<a href = "#"><span class = "material-symbols-outlined">
+			</span>Placeholder</a>
+		</li> 
+	</aside>
+
 	<section class="content-box">
 		<h2>File Structure</h2>
 		<p>In Unix systems, the file structure is hierarchical, starting from the root directory denoted by

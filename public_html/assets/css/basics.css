@@ -1,0 +1,23 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background-color: light-dark(#ffffff, #000000);
+  color: light-dark(#000000, #ffffff);
+  padding: 25px 20px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+
+}
+
+.sidebar-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: light-dark(#000000, #ffffff);
+  margin-left: 23px;
+}
