@@ -41,10 +41,11 @@
 		<section class="team-member">
 			<div class="member-header">
 				<h2>Fay!</h2>
-				<img src="https://placecats.com/300/300" alt="Headshot of Tigersay team member">
+				<img src="./assets/images/team_photos/triple-glasses.jpg" alt="Fay wearing three glasses">
 			</div>
 			<span>Information Architect</span>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, est. Unde sunt esse consectetur non cupiditate dolorum quos qui quia earum ut quis reprehenderit perspiciatis, adipisci ex laudantium, deleniti magnam.</p>
+			<p>Proud creater of the hero; Commited Git manager; Unofficial documentation maintainer; Partial content writer; MIA Professional.</p>
+			<p>"Join the Cycling Club y'all"</p>
 		</section>
 
 		<section class="team-member">

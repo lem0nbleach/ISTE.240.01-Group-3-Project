@@ -50,6 +50,13 @@ a {
 }
 
 /* navbar styles */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: light-dark(#ffffff, #000000);
+}
+
 .site-nav {
   background-color: light-dark(#ffffff, #000000);
   display: flex;
@@ -71,6 +78,19 @@ a {
   display: block;
 }
 
+/* Logo follows the theme: light artwork on dark, dark artwork on light. */
+.home-logo .logo-dark {
+  display: none;
+}
+
+:root[data-theme="light"] .home-logo .logo-white {
+  display: none;
+}
+
+:root[data-theme="light"] .home-logo .logo-dark {
+  display: block;
+}
+
 .home-logo a {
   color: #69CC4D;
   font-size: 24px;
@@ -80,7 +100,7 @@ a {
 }
 
 .home-logo > a:hover {
-  color: #193113;
+  color: #55A344;
 }
 
 .home-logo > a.active {
@@ -191,10 +211,8 @@ li {
 
 /* style for standard box of content */
 .content-box {
-  background-color: light-dark(#f0f0f0, #111111);
-  color: light-dark(#000000, #ffffff);
   padding: 20px;
-  margin: 20px 50px;
+  margin: 20px 100px;
   border-radius: 10px;
 }
 
@@ -214,12 +232,16 @@ li {
   margin: 20px 20px;
 }
 
-#box {
-  background-color: light-dark(#ffffff, #000000);
-  color: light-dark(#000000, #ffffff);
+#entry {
+  background-color: #0e0e0e;
+  color: #69CC4D;
   border: none;
   font-family: monospace;
   font-size: 16px;
+}
+
+#entry:focus {
+  outline: none;
 }
 
 /* footer styles are here */
@@ -271,63 +293,61 @@ li {
 
 /* Define Theme Colors */
 :root {
-  color-scheme: light;
-  --track-bg: #cbd5e1;
-  --track-active: #27ff52;
-  --knob-color: #ffffff;
-}
-
-/* Switch root color-scheme when the checkbox is checked */
-:root:has(#theme-toggle:checked) {
   color-scheme: dark;
 }
 
-nav {
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Light mode is opt-in; dark is the default. */
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
-/* Slider track */
-.theme-switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 32px;
+/* Theme flip: fade every surface that changes colour, so the switch reads as one motion.
+   Only colour properties are listed, so nothing moves or resizes. */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none;
+  }
+}
+
+/* Theme toggle: icon-only button, shows the mode you would switch to. */
+.theme-toggle {
+  background: none;
+  border: 0;
+  padding: 4px;
   cursor: pointer;
+  color: light-dark(#000000, #ffffff);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
 }
 
-/* Hide default HTML checkbox */
-.theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.theme-toggle:hover {
+  color: #69CC4D;
 }
 
-.slider {
-  position: absolute;
-  inset: 0;
-  background-color: var(--track-bg);
-  border-radius: 34px;
-  transition: background-color 0.3s ease;
+.theme-toggle:focus-visible {
+  outline: 2px solid #69CC4D;
+  outline-offset: 2px;
 }
 
-/* sliding knob */
-.slider::before {
-  content: "";
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  left: 4px;
-  bottom: 4px;
-  background-color: var(--knob-color);
-  border-radius: 50%;
-  transition: transform 0.3s ease;
+.theme-toggle .icon {
+  width: 22px;
+  height: 22px;
+  display: block;
 }
 
-input:checked + .slider {
-  background-color: var(--track-active);
-}
+/* Dark mode shows a sun (switch to light); light mode shows a moon. */
+.theme-toggle .icon-sun { display: none; }
 
-input:checked + .slider::before {
-  transform: translateX(28px);
-}
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
