@@ -51,10 +51,10 @@
 		<section class="team-member">
 			<div class="member-header">
 				<h2>Vincent!</h2>
-				<img src="https://placecats.com/neo/300/300" alt="Headshot of Tigersay team member">
+				<img src="./assets/images/team_photos/vincent-chud.jpg" alt="Vincent as a chud">
 			</div>
 			<span>Content Creator / Strategist</span>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, est. Unde sunt esse consectetur non cupiditate dolorum quos qui quia earum ut quis reprehenderit perspiciatis, adipisci ex laudantium, deleniti magnam.</p>
+			<p>I love coding so much and making websites and web and mobile two. I helped develop the main content pages and writing php. I wrote a lot of the content initially, but it was refactored later.</p>
 		</section>
 
 	</div>
