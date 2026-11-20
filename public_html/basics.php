@@ -40,6 +40,8 @@
 			<li>Create a new 'albums' directory inside the music folder.</li>
 			<li>List its contents to see your new directory.</li>
 		</ol>
+
+		<!-- This is what a terminal looks like in a html file -->
 		<div class="terminal">
 			<div class="screen" id="files-screen"></div>
 			<form id="files-form">
@@ -48,6 +50,7 @@
 			</form>
 			<script src="assets/scripts/basicsTerminal.js"></script>
 		</div>
+
 	</section>
 	<!-- Page content goes here. Each page sets $pageTitle and $activeNav above. -->
 
