@@ -1,9 +1,9 @@
 
 
 // first get the elements we need
-var screen = document.getElementById('screen');
-var prompt = document.getElementById('prompt');
-var box = document.getElementById('entry');
+var screen = document.getElementsByClassName('screen');
+var prompt = document.getElementsByClassName('prompt');
+var box = document.getElementsByClassName('entry');
 
 // make the names of the folders Ill actually be using each one will
 // be a list of the folders and pretend items inside it
@@ -30,11 +30,11 @@ var step = 0;
 // functions to handle printing and prompting the user
 function print(text) {
 
-  screen.innerHTML += text + "<br>";
+  screen[0].innerHTML += text + "<br>";
 }
 
 function promptUser() {
-  prompt.innerHTML = where + " $ ";
+  prompt[0].innerHTML = where + " $ ";
 }
 
 function runCommand(command) {
@@ -65,8 +65,8 @@ function runCommand(command) {
 // handle form submission (presses enter)
 document.getElementById('form').addEventListener('submit', function(event) {
   event.preventDefault();
-  var typed = box.value.trim();
-  box.value = '';
+  var typed = box[0].value.trim();
+  box[0].value = '';
 
   print(where + " $ " + typed);
   // is this the command i want?
@@ -83,9 +83,9 @@ document.getElementById('form').addEventListener('submit', function(event) {
   }
   if (step >= steps.length) {
     print("Lesson complete!");
-    box.disabled = true;
-    prompt.innerHTML = "";
-    box.style.display = "none";
+    box[0].disabled = true;
+    prompt[0].innerHTML = "";
+    box[0].style.display = "none";
   } else {
     promptUser();
   }

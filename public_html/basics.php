@@ -41,10 +41,10 @@
 			<li>List its contents to see your new directory.</li>
 		</ol>
 		<div class="terminal">
-			<div id="screen"></div>
+			<div class="screen"></div>
 			<form id="form">
-				<span id="prompt"></span>
-				<input id="entry" autocomplete="off" placeholder="Enter commands here">
+				<span class="prompt"></span>
+				<input class="entry" autocomplete="off" placeholder="Enter commands here">
 			</form>
 			<script src="assets/scripts/basicsTerminal.js"></script>
 		</div>
