@@ -201,7 +201,6 @@ main {
   flex: 1;
   padding: 50px;
   margin: 30px 40px;
-  
 }
 
 li {
@@ -209,11 +208,17 @@ li {
   font-size: 18px;
 }
 
+p {
+  max-width: 85ch;
+}
+
 /* style for standard box of content */
 .content-box {
+  box-sizing: border-box;
   padding: 20px;
-  margin: 20px 100px;
+  margin: 20px auto;
   border-radius: 10px;
+  max-width: 1000px;
 }
 
 .content-box h2 {
