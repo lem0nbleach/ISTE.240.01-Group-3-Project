@@ -27,6 +27,7 @@
 		}
 	?>
 	<script src="assets/scripts/themeToggle.js" defer></script>
+	<script src="assets/scripts/navToggle.js" defer></script>
 </head>
 <body>
 

@@ -4,11 +4,23 @@
 		<img class="logo-dark" src="assets/images/tigersay-logo/dark_logo_embellished.PNG" alt="">
 		<a href="index.php" class="<?php echo $activeNav === 'home' ? 'active' : ''; ?>"<?php echo $activeNav === 'home' ? ' aria-current="page"' : ''; ?>>&lt;Tigersay!&gt;</a>
 	</div>
-	<a href="basics.php" class="<?php echo $activeNav === 'basics' ? 'active' : ''; ?>"<?php echo $activeNav === 'basics' ? ' aria-current="page"' : ''; ?>>Basics</a>
-	<a href="permissions.php" class="<?php echo $activeNav === 'permissions' ? 'active' : ''; ?>"<?php echo $activeNav === 'permissions' ? ' aria-current="page"' : ''; ?>>Permissions</a>
-	<a href="apps-tools.php" class="<?php echo $activeNav === 'apps' ? 'active' : ''; ?>"<?php echo $activeNav === 'apps' ? ' aria-current="page"' : ''; ?>>Apps &amp; Tools</a>
-	<a href="glossary.php" class="<?php echo $activeNav === 'glossary' ? 'active' : ''; ?>"<?php echo $activeNav === 'glossary' ? ' aria-current="page"' : ''; ?>>Glossary</a>
-	<a href="about.php" class="<?php echo $activeNav === 'about' ? 'active' : ''; ?>"<?php echo $activeNav === 'about' ? ' aria-current="page"' : ''; ?>>About</a>
+
+	<!-- Hamburger: hidden on wide screens, toggles the link menu on narrow ones. -->
+	<button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+		<span class="nav-toggle-box" aria-hidden="true">
+			<span></span>
+			<span></span>
+			<span></span>
+		</span>
+	</button>
+
+	<div class="nav-menu" id="nav-menu">
+		<a href="basics.php" class="<?php echo $activeNav === 'basics' ? 'active' : ''; ?>"<?php echo $activeNav === 'basics' ? ' aria-current="page"' : ''; ?>>Basics</a>
+		<a href="permissions.php" class="<?php echo $activeNav === 'permissions' ? 'active' : ''; ?>"<?php echo $activeNav === 'permissions' ? ' aria-current="page"' : ''; ?>>Permissions</a>
+		<a href="apps-tools.php" class="<?php echo $activeNav === 'apps' ? 'active' : ''; ?>"<?php echo $activeNav === 'apps' ? ' aria-current="page"' : ''; ?>>Apps &amp; Tools</a>
+		<a href="glossary.php" class="<?php echo $activeNav === 'glossary' ? 'active' : ''; ?>"<?php echo $activeNav === 'glossary' ? ' aria-current="page"' : ''; ?>>Glossary</a>
+		<a href="about.php" class="<?php echo $activeNav === 'about' ? 'active' : ''; ?>"<?php echo $activeNav === 'about' ? ' aria-current="page"' : ''; ?>>About</a>
+	</div>
 
 	<button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="true" aria-label="Switch to light mode">
 		<svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">

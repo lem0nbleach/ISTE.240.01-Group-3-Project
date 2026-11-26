@@ -53,6 +53,14 @@
   color: #8fae8b;
 }
 
+/* Match main's reduced mobile padding so the hero band still reaches the edges. */
+@media (max-width: 800px) {
+  .hero {
+    margin: -20px -12px 20px -12px;
+    padding: 20px 12px;
+  }
+}
+
 /* Narrow screens wrap the big line to three rows; reserve the space up front. */
 @media (max-width: 600px) {
   .hero-line {

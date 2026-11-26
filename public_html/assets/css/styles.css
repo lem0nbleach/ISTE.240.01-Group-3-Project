@@ -133,19 +133,146 @@ a {
   color: #69CC4D;
 }
 
-.site-nav > a {
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-menu > a {
   color: light-dark(#000000, #ffffff);
   text-decoration: none;
   font-size: 16px;
 }
 
-.site-nav > a:hover {
+.nav-menu > a:hover {
   color: #69CC4D;
 }
 
-.site-nav > a.active {
+.nav-menu > a.active {
   color: #69CC4D;
   font-weight: bold;
+}
+
+/* Hamburger button: hidden until the links no longer fit inline. */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 12px;
+  cursor: pointer;
+  color: light-dark(#000000, #ffffff);
+}
+
+.nav-toggle:hover {
+  color: #69CC4D;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid #69CC4D;
+  outline-offset: 2px;
+}
+
+.nav-toggle-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 26px;
+  height: 20px;
+}
+
+.nav-toggle-box span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* The three bars fold into an X while the menu is open. */
+.nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-box span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Collapse the links into a hamburger panel before they can overflow the bar. */
+@media (max-width: 900px) {
+  .site-nav {
+    position: relative;
+    gap: 12px;
+    padding: 10px 16px;
+  }
+
+  .home-logo {
+    gap: 8px;
+  }
+
+  .home-logo img {
+    width: 56px;
+  }
+
+  .home-logo a {
+    font-size: 19px;
+  }
+
+  /* Keep the theme switch visible, with the hamburger to its right. */
+  .theme-toggle {
+    order: 1;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+  }
+
+  /* Links drop out of the bar and become a panel under the header. */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 6px 0;
+    background-color: light-dark(#ffffff, #000000);
+    border-top: 1px solid light-dark(#e5e7eb, #262626);
+    border-bottom: 1px solid light-dark(#e5e7eb, #262626);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  }
+
+  .nav-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-menu > a {
+    padding: 14px 20px;
+    font-size: 17px;
+    border-bottom: 1px solid light-dark(#e5e7eb, #262626);
+  }
+
+  .nav-menu > a:last-child {
+    border-bottom: none;
+  }
 }
 
 /* Logo */
@@ -314,10 +441,42 @@ li {
   text-decoration: none;
 }
 
+/* Images never overflow their container. */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Screen width constraints */
 @media (max-width: 800px) {
+  /* Tighter page frame so content has room on phones. */
   main {
-      grid-template-columns: 1fr;  
+    margin: 16px 12px;
+    padding: 20px 12px;
+  }
+
+  h1 {
+    font-size: 32px;
+    padding-bottom: 28px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 21px;
+    padding-top: 32px;
+  }
+
+  h4 {
+    font-size: 17px;
+    padding-top: 32px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
   }
 
   .topbar ul {
@@ -329,20 +488,38 @@ li {
       margin: 10px 0;
   }
 
-  img {
-    max-width: 600px;
+  .terminal {
+    margin: 16px 0;
+    overflow-x: auto;
+    overflow-wrap: break-word;
   }
-}
 
-@media (max-width: 700px) {
-  img {
-    max-width: 500px;
+  .terminal form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .terminal .entry {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .site-footer .wrap {
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .site-footer p {
+    padding: 22px 0;
+    font-size: 15px;
   }
 }
 
 @media (max-width: 600px) {
-  img {
-    max-width: 400px;
+  .content-box {
+    padding: 14px;
   }
 }
 
@@ -405,4 +582,12 @@ li {
 
 :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* Honour reduced-motion for the navigation's own transitions too. */
+@media (prefers-reduced-motion: reduce) {
+  .nav-menu,
+  .nav-toggle-box span {
+    transition: none;
+  }
+}
 

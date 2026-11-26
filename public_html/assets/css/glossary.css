@@ -72,3 +72,21 @@ h1 {
     line-height: 1.6;
     max-width: 65ch;
 }
+
+/* Stack the term above its definition on narrow screens. */
+@media (max-width: 800px) {
+    .glossary-layout {
+        margin: 24px auto 48px;
+        gap: 20px;
+    }
+
+    .glossary-section {
+        padding: 18px;
+    }
+
+    .glossary-list li {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 20px 0;
+    }
+}

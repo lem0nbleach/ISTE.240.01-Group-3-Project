@@ -69,3 +69,19 @@ h1 {
 .reference-link a:hover {
     color: #69CC4D;
 }
+
+@media (max-width: 800px) {
+    .references-layout {
+        width: 100%;
+        margin: 24px auto 48px;
+        gap: 20px;
+    }
+
+    .reference-section {
+        padding: 18px;
+    }
+
+    .reference-link {
+        padding: 22px 0;
+    }
+}
