@@ -292,6 +292,25 @@ li {
   padding: 30px 0;
 }
 
+.site-footer .footer-links {
+  padding: 24px 0 0;
+}
+
+.site-footer .footer-links a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer .footer-links a:hover {
+  color: #69CC4D;
+}
+
+.site-footer .footer-links a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /* Screen width constraints */
 @media (max-width: 800px) {
   main {

@@ -41,7 +41,7 @@ Because of that, the doctype, navigation and footer exist in exactly one file ea
 │       ├── inc/
 │       │   ├── header.php        Doctype, <head>, site header; includes nav.php
 │       │   ├── nav.php           Navigation links and active-page logic
-│       │   └── footer.php        Closes <main>, prints footer, closes document
+│       │   └── footer.php        Closes <main>, prints footer with the References link, closes document
 │       ├── css/
 ├── nginx/
 │   └── default.conf              Server block for the local preview
@@ -62,8 +62,8 @@ Practically everything that is not the page content itself lives in `public_html
 ## Conventions
 
 - Filenames are lowercase and hyphenated (`apps-tools.php`).
-- Navigation order: Home, Basics, Permissions, Apps & Tools, Glossary, References, About.
-- Navigation keys: `home`, `basics`, `permissions`, `apps`, `glossary`, `references`, `about`.
+- Navigation order: Home, Basics, Permissions, Apps & Tools, Glossary, About.
+- Navigation keys: `home`, `basics`, `permissions`, `apps`, `glossary`, `about`. References is linked from the footer, not the nav.
 - Page files contain no doctype, `<nav>`, `<footer>` or layout markup.
 - If something appears on more than one page, it belongs in `assets/inc/`.
 
