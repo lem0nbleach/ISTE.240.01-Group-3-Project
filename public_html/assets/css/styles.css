@@ -43,6 +43,7 @@ h5 {
 p {
   color: light-dark(#000000, #ffffff);
   font-size: 18px;
+  line-height: 1.6;
 }
 
 a {
@@ -232,12 +233,14 @@ main {
 li {
   padding: 10px;
   font-size: 18px;
+  line-height: 1.6;
 }
 
 /* style for standard box of content */
 .content-box {
   padding: 20px;
-  margin: 20px 100px;
+  max-width: 760px;
+  margin: 20px auto;
   border-radius: 10px;
 }
 
